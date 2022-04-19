@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/ezasse-doc',
+  base: '/ezasse-doc/',
 
   // 主题和它的配置
   theme: '@vuepress/theme-default',
