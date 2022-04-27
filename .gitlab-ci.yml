@@ -4,7 +4,7 @@ image: node:14-buster
 pages:
   # 每当 push 到 main 分支时触发部署
   only:
-  - main
+  - master
 
   # 缓存 node_modules
   cache:
