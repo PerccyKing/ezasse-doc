@@ -6,6 +6,12 @@ actions:
   - text: 立即体验
     link: /guide/
     type: primary
+  - text: Github
+    link: https://github.com/PerccyKing/ezasse
+    type: secondary
+  - text: Gitee
+    link: https://gitee.com/perccyking/ezasse
+    type: secondary
 features:
   - title: 易用
     details: 稍作配置，启动即用
