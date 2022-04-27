@@ -23,13 +23,27 @@ features:
 
 ### 立即体验(spring boot)
 #### 1.安装
+<CodeGroup>
+  <CodeGroupItem title="Maven" active>
+
 ```xml
 <dependency>
     <groupId>cn.com.pism.ezasse</groupId>
     <artifactId>ezasse-spring-boot-starter</artifactId>
-    <version>${ezasse.version}</version>
+    <version>0.0.4</version>
 </dependency>
 ```
+  </CodeGroupItem>
+
+  <CodeGroupItem title="Gradle">
+
+```groovy
+implementation 'cn.com.pism.ezasse:ezasse-spring-boot-starter:0.0.4'
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
 #### 2.配置
 ```yaml
 spring:
@@ -46,6 +60,7 @@ spring:
 #### 3.编写SQL文件
 ##### 1.initTable.sql
 ```sql
+# ezasse 会在数据库中查询是否有user表，没有的话会执行创建表
 -- TABLE(user)
 CREATE TABLE user
 (
@@ -57,12 +72,14 @@ CREATE TABLE user
 ```
 ##### 2.updateTable.sql
 ```sql
--- CHANGE_ADD(user.user_type)
+# ezasse 会检查 user表中，是否存在user_type字段，如果没有会执行以下脚本
+-- ADD(user.user_type)
 alter table user
     add user_type varchar(1024) null comment '用户类型' after name;
 ```
 ##### 3.initData.sql
 ```sql
+# ezasse 会检查EXEC(sql) 中的SQL 返回值，是否为0 如果结果为0 会执行以下脚本
 -- EXEC(select count(1) from user where id = 1)
 insert into user(id,name,user_type) value(1,'root','超级管理员');
 ```

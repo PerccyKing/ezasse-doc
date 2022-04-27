@@ -1,15 +1,25 @@
 # 快速开始
-
+![logo]()
 ## 简介
+ezasse为 Easy automatic SQL script executor 的首字母简写，是一个简单的SQL脚本执行器，主要目的在于启动项目后，按照脚本定义好的规则进行检查、判断，如果满足约定条件，则执行脚本
 
-### 是什么
+### 主要功能
+* SQL脚本执行器
+* 配合git进行SQL版本管理
+* 自定义SQL校验器
+* 自定义SQL执行器
+* 多数据源、多数据节点支持
 
-ezasse 是一个简单的SQL脚本执行器，主要目的在于判断SQL是否需要在某个节点上执行，并在某个节点上执行
+### 官方执行器支持列表
+若果一下执行器没有适配你使用的数据库，请查看[自定义执行器](#)
+* [MySQL](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/MysqlEzasseExecutor.java)
+* [Oracle](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/OracleEzasseExecutor.java)
+* [MariaDB](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/MariaDbEzasseExecutor.java)
+* [H2](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/H2EzasseExecutor.java)
+* [HSQL](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/HsqlDbExecutor.java)
 
-### 有什么作用
-
-在开发过程中，通常伴随着数据库表信息的新增以及修改，并且默认生成一些数据
-
+### 架构
+![](../.vuepress/public/images/ezasse-framework.png)
 ## 立即体验
 
 ### 安装
