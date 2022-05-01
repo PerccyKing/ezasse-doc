@@ -1,5 +1,6 @@
+const base = require('./configs/base')
 module.exports = {
-  base: '/ezasse-doc/',
+  base: base,
 
   // 主题和它的配置
   theme: '@vuepress/theme-default',
