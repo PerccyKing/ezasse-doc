@@ -5,7 +5,7 @@ ezasse为 Easy automatic SQL script executor 的首字母简写，是一个简�
 
 ### 主要功能
 * SQL脚本执行器
-* 配合git进行SQL版本管理
+* 与项目版本对其的SQL版本管理
 * 自定义SQL校验器
 * 自定义SQL执行器
 * 多数据源、多数据节点支持
