@@ -15,6 +15,8 @@ module.exports = {
               children: [
                 '/guide/README.md',
                 '/guide/function-list.md',
+                "/guide/file-naming-convention.md",
+                "/guide/built-in-syntax.md",
                 '/guide/function-planning.md',
                 '/guide/contact-us.md',
                 '/guide/participation-and-contribution.md',
