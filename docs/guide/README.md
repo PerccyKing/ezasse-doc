@@ -1,5 +1,5 @@
 # 快速开始
-![logo]()
+![logo](/images/logo.svg)
 ## 简介
 ezasse为 Easy automatic SQL script executor 的首字母简写，是一个简单的SQL脚本执行器，主要目的在于启动项目后，按照脚本定义好的规则进行检查、判断，如果满足约定条件，则执行脚本
 

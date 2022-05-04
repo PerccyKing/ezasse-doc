@@ -1,7 +1,7 @@
 ---
 home: true
 title: 首页
-heroImage: /images/hero.png
+heroImage: /images/logo.svg
 actions:
   - text: 立即体验
     link: /guide/

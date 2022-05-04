@@ -4,6 +4,9 @@ module.exports = {
 
   // 主题和它的配置
   theme: '@vuepress/theme-default',
+  head: [
+    ['link', { rel: 'icon', href: '/images/logo.ico' }]
+  ],
   themeConfig: {
     locales: {
       '/': {
@@ -30,6 +33,7 @@ module.exports = {
       },
 
     },
+    logo: '/images/logo128.ico',
   },
   locales: {
     '/': {

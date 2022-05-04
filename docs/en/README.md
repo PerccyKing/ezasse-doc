@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: /images/hero.png
+heroImage: /images/svg.png
 actions:
 - text: 快速上手
   link: /zh/guide/getting-started.html
