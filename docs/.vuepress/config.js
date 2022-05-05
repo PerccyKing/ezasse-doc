@@ -1,5 +1,5 @@
 const base = require('./configs/base')
-const {backToTopPlugin} = require('@vuepress/plugin-back-to-top')
+// const {backToTopPlugin} = require('@vuepress/plugin-back-to-top')
 module.exports = {
   base: base,
 
@@ -8,9 +8,9 @@ module.exports = {
   head: [
     ['link', {rel: 'icon', href: '/images/logo.ico'}]
   ],
-  plugins: [
-    backToTopPlugin(),
-  ],
+  // plugins: [
+  //   backToTopPlugin(),
+  // ],
   themeConfig: {
     locales: {
       '/': {
@@ -25,8 +25,8 @@ module.exports = {
               ],
             },
             {
-              text:'详细介绍',
-              children:[
+              text: '详细介绍',
+              children: [
                 '/guide/detail/config.md',
                 '/guide/detail/file-naming-convention.md',
                 "/guide/detail/built-in-syntax.md",
