@@ -1,11 +1,15 @@
 const base = require('./configs/base')
+const {backToTopPlugin} = require('@vuepress/plugin-back-to-top')
 module.exports = {
   base: base,
 
   // 主题和它的配置
   theme: '@vuepress/theme-default',
   head: [
-    ['link', { rel: 'icon', href: '/images/logo.ico' }]
+    ['link', {rel: 'icon', href: '/images/logo.ico'}]
+  ],
+  plugins: [
+    backToTopPlugin(),
   ],
   themeConfig: {
     locales: {
@@ -14,15 +18,33 @@ module.exports = {
         sidebar: {
           '/guide/': [
             {
-              text: '指南',
+              text: '快速入门',
               children: [
-                '/guide/README.md',
-                '/guide/function-list.md',
-                "/guide/file-naming-convention.md",
-                "/guide/built-in-syntax.md",
-                '/guide/function-planning.md',
-                '/guide/contact-us.md',
-                '/guide/participation-and-contribution.md',
+                '/guide/base/README.md',
+                '/guide/base/function-list.md',
+              ],
+            },
+            {
+              text:'详细介绍',
+              children:[
+                '/guide/detail/config.md',
+                '/guide/detail/file-naming-convention.md',
+                "/guide/detail/built-in-syntax.md",
+                '/guide/detail/function-planning.md',
+              ]
+            },
+            {
+              text: '扩展',
+              children: [
+                '/guide/expand/customer-checker.md',
+                '/guide/expand/customer-executor.md'
+              ],
+            },
+            {
+              text: '联系我们',
+              children: [
+                '/guide/end/contact-us.md',
+                '/guide/end/participation-and-contribution.md',
               ],
             },
           ],

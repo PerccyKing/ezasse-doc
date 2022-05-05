@@ -4,7 +4,7 @@ title: 首页
 heroImage: /images/logo.svg
 actions:
   - text: 立即体验
-    link: /guide/
+    link: /guide/base
     type: primary
   - text: Github
     link: https://github.com/PerccyKing/ezasse

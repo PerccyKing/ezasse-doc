@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+  ezasse-doc:
+    image: pism/ezasse-doc
+    ports:
+      - "37000:8080"

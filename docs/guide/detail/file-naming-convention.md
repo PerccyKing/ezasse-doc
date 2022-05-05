@@ -33,7 +33,7 @@ group-[datasource]-[order]-[other].sql
 * **V1-slave-001-data.sql**
     * 适用于上面的规则定义，没有任何区别
 
-## 使用建议
+## 最佳实践
 ### 单数据源
 ```
 resource

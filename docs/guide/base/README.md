@@ -1,7 +1,23 @@
 # 快速开始
 ![logo](/images/logo.svg)
+
+## 演示视频
+
+[点击查看](https://www.bilibili.com/video/BV1k3411P7Ba?share_source=copy_web)
+
+<iframe width="100%" height="600px" src="//player.bilibili.com/player.html?aid=426301518&bvid=BV1k3411P7Ba&cid=712703775&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 ## 简介
 ezasse为 Easy automatic SQL script executor 的首字母简写，是一个简单的SQL脚本执行器，主要目的在于启动项目后，按照脚本定义好的规则进行检查、判断，如果满足约定条件，则执行脚本
+
+### 解释
+* **在项目开发过程中，或者在版本不断迭代过程中，会对表结构进行修改，或者在进行版本发布时，需要内置部分数据，从而会产生一部分脚本，所以在迭代中，需要进行脚本管理**
+
+* **脚本管理很容易做到，但是在传统的脚本管理办法中，编写好的脚本从开发到测试到发版，会由不同的角色（开发、测试、运维）在服务器单独执行，并且一个脚本会传输多次，这样进行脚本管理会很繁琐**
+
+* **如果有一种工具能够在项目启动时，按照一定的规则对数据库进行检查，如果表不存在就执行创建表的SQL，如果数据不存在就执行插入数据的操作，如果数据存在，我可以执行一条修改数据的操作**
+
+* **所以`ezasse`就出现了，`ezasse`就可以解决上述难题，并且可以重复执行，同时配合代码版本管理工具，对脚本版本进行管理**
 
 ### 主要功能
 * SQL脚本执行器
@@ -10,17 +26,11 @@ ezasse为 Easy automatic SQL script executor 的首字母简写，是一个简�
 * 自定义SQL执行器
 * 多数据源、多数据节点支持
 
-### 官方执行器支持列表
-若果一下执行器没有适配你使用的数据库，请查看[自定义执行器](#)
-* [MySQL](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/MysqlEzasseExecutor.java)
-* [Oracle](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/OracleEzasseExecutor.java)
-* [MariaDB](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/MariaDbEzasseExecutor.java)
-* [H2](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/H2EzasseExecutor.java)
-* [HSQL](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/HsqlDbExecutor.java)
-
-### 架构
-![](../.vuepress/public/images/ezasse-framework.png)
 ## 立即体验
+### 前提
+
+1. spring或SpringBoot项目
+2. 配置了数据库连接，并正确配置驱动
 
 ### 安装
 
@@ -47,7 +57,7 @@ maven坐标
 <dependency>
     <groupId>cn.com.pism.ezasse</groupId>
     <artifactId>ezasse-spring-boot-starter</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.5</version>
 </dependency>
 ```
 
@@ -60,7 +70,7 @@ maven坐标
 <dependency>
     <groupId>cn.com.pism.ezasse</groupId>
     <artifactId>ezasse-core</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.5</version>
 </dependency>
 ```
 
