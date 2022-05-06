@@ -30,7 +30,7 @@ features:
 <dependency>
     <groupId>cn.com.pism.ezasse</groupId>
     <artifactId>ezasse-spring-boot-starter</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.6</version>
 </dependency>
 ```
   </CodeGroupItem>
@@ -38,7 +38,7 @@ features:
   <CodeGroupItem title="Gradle">
 
 ```groovy
-implementation 'cn.com.pism.ezasse:ezasse-spring-boot-starter:0.0.4'
+implementation 'cn.com.pism.ezasse:ezasse-spring-boot-starter:0.0.6'
 ```
 
   </CodeGroupItem>
