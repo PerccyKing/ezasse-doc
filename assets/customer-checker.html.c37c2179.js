@@ -1,0 +1,57 @@
+import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";import{e}from"./app.72f8f8b9.js";const s={},a=e(`<h1 id="\u81EA\u5B9A\u4E49\u6821\u9A8C\u5668" tabindex="-1"><a class="header-anchor" href="#\u81EA\u5B9A\u4E49\u6821\u9A8C\u5668" aria-hidden="true">#</a> \u81EA\u5B9A\u4E49\u6821\u9A8C\u5668</h1><p><code>ezasse</code>\u53EA\u63D0\u4F9B\u4E86\u4E00\u4E9B\u57FA\u7840\u7684\u6821\u9A8C\u89C4\u5219\u4E0E\u6821\u9A8C\u5173\u952E\u5B57\uFF0C\u5982\u679C\u8FD9\u4E9B\u6821\u9A8C\u5173\u952E\u5B57\u4F60\u4E0D\u559C\u6B22\uFF0C\u6216\u8005\u89C9\u5F97\u6821\u9A8C\u89C4\u5219\u4E0E\u73B0\u6709\u7684\u529F\u80FD\u4E0D\u5339\u914D\uFF0C\u4F60\u53EF\u4EE5\u81EA\u884C\u5B9E\u73B0\u6821\u9A8C\u5668\uFF0C\u5B9E\u73B0\u65B9\u5F0F\u548C\u65B9\u6CD5\u4E5F\u5F88\u7B80\u5355</p><h2 id="\u4FEE\u6539\u5173\u952E\u5B57" tabindex="-1"><a class="header-anchor" href="#\u4FEE\u6539\u5173\u952E\u5B57" aria-hidden="true">#</a> \u4FEE\u6539\u5173\u952E\u5B57</h2><p>\u5982\u679C\u53EA\u662F\u4FEE\u6539\u5173\u952E\u5B57\uFF0C\u53EF\u4EE5\u7EE7\u627F\u5177\u4F53\u7684\u6821\u9A8C\u5668\u7684\u5B9E\u73B0\uFF0C\u6216\u8005\u76F4\u63A5\u4FEE\u6539\u914D\u7F6E\u6587\u4EF6\uFF0C\u4E0B\u9762\u6F14\u793A\u4FEE\u6539\u9ED8\u8BA4\u6267\u884C\u5668\u7684\u5173\u952E\u5B57<code>EXEC</code>\u4FEE\u6539\u4E3A<code>IF</code></p><ol><li>\u521B\u5EFA\u4E00\u4E2A\u7C7B<code>EzasseDefaultChecker.java</code></li><li>\u7EE7\u627F<code>DefaultKeyWordEzasseChecker</code>\u5E76\u590D\u5199<code>getId</code>\u65B9\u6CD5</li></ol><div class="language-java ext-java line-numbers-mode"><pre class="language-java"><code>package cn.com.pism.ezasse.demo.singledb.config;
+
+import cn.com.pism.ezasse.checker.DefaultKeyWordEzasseChecker;
+import cn.com.pism.ezasse.model.EzasseConfig;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author PerccyKing
+ */
+@Component
+public class EzasseDefaultChecker extends DefaultKeyWordEzasseChecker {
+    @Override
+    public String getId(EzasseConfig config) {
+        return &quot;IF&quot;;
+    }
+}
+
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><ol start="3"><li>\u4FEE\u6539\u540E\u7684\u8BED\u53E5\u5C06\u53D8\u4E3A <code>-- IF(select 0)</code></li></ol><h2 id="\u5B8C\u5168\u5B9A\u5236" tabindex="-1"><a class="header-anchor" href="#\u5B8C\u5168\u5B9A\u5236" aria-hidden="true">#</a> \u5B8C\u5168\u5B9A\u5236</h2><p>\u4EE5\u4E0B\u6559\u7A0B\uFF0C\u5C06\u5B9E\u73B0\u4E00\u4E2A\u81EA\u5B9A\u4E49\u6821\u9A8C\u5668\uFF0C\u6821\u9A8C\u5173\u952E\u5B57\u4E3A <code>HAVE_TABLE</code>\uFF0C\u4F5C\u7528\u4E3A\u5F53\u6570\u636E\u5E93\u4E2D\u5B58\u5728\u67D0\u4E00\u5F20\u8868\u7684\u65F6\u5019\uFF0C\u6267\u884C\u811A\u672C</p><ol><li>\u521B\u5EFA\u4E00\u4E2A\u7C7B <code>EzasseHaveTableChecker.java</code></li><li>\u7EE7\u627F<code>EzasseChecker</code>,\u590D\u5199\u6240\u6709\u7684\u65B9\u6CD5\uFF0C\u4EE5\u4E0B\u662F\u5177\u4F53\u5B9E\u73B0</li></ol><div class="language-java ext-java line-numbers-mode"><pre class="language-java"><code>package cn.com.pism.ezasse.demo.singledb.config;
+
+import cn.com.pism.ezasse.checker.EzasseChecker;
+import cn.com.pism.ezasse.executor.EzasseExecutor;
+import cn.com.pism.ezasse.model.EzasseConfig;
+import cn.com.pism.ezasse.model.EzasseTableInfo;
+import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
+
+import javax.sql.DataSource;
+import java.util.List;
+
+/**
+ * \u6821\u9A8C\u884C\u8BED\u6CD5\uFF1A{@code -- HAVE_TABLE(table_name)}&lt;br/&gt;
+ * \u6821\u9A8C\u89C4\u5219\uFF1A\u5F53\u6570\u636E\u5E93\u4E2D\u5B58\u5728\u5B9A\u4E49\u7684\u8868\u65F6\uFF0C\u6267\u884CSQL
+ *
+ * @author PerccyKing
+ */
+@Component
+public class EzasseHaveTableChecker extends EzasseChecker {
+    @Override
+    public boolean needToExecute(DataSource checkDataSource, String checkContent, EzasseExecutor executor) {
+        //\u53EF\u4EE5\u4F7F\u7528 publicCheck,\u5F53\u6267\u884C\u5668\u4E0E\u6821\u9A8C\u5668\u4E0D\u4E3A\u7A7A\u7684\u65F6\u5019\uFF0C\u518D\u6267\u884C\u6821\u9A8C\u903B\u8F91\uFF0C\u5426\u5219\u6267\u884C\u8DF3\u8FC7\u6821\u9A8C\u884C
+        return publicCheck(checkContent, executor, () -&gt; {
+            //\u83B7\u53D6\u8868\u7684\u57FA\u672C\u4FE1\u606F\uFF0C\u5982\u679C\u54CD\u5E94\u7ED3\u679C\u4E0D\u4E3A\u7A7A\uFF0C\u8868\u793A\u53EF\u4EE5\u6267\u884CSQL\u811A\u672C
+            List&lt;EzasseTableInfo&gt; tableInfo = executor.getTableInfo(checkContent);
+            return !CollectionUtils.isEmpty(tableInfo);
+        });
+    }
+
+    @Override
+    public String getId(EzasseConfig config) {
+        return &quot;HAVE_TABLE&quot;;
+    }
+}
+
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p>::: warning \u5173\u952E\u5B57\u7684\u5B9A\u4E49\u9700\u8981\u9075\u5FAA\u4EE5\u4E0B\u89C4\u5219</p><ol><li>\u5173\u952E\u5B57\u4E0D\u5B9C\u8FC7\u957F\uFF0C\u5982\u679C\u5173\u952E\u5B57\u5B9A\u4E49\u4E0E\u73B0\u5B58\u7684\u5173\u952E\u5B57\u4E00\u6837\uFF0C\u5219\u4F1A\u8986\u76D6\u73B0\u6709\u7684\u5173\u952E\u5B57</li><li>\u5173\u952E\u5B57\u4E2D\u4E0D\u80FD\u5305\u542B\u7B26\u53F7\u3010.\u3011</li></ol><p>::: 3. \u4F7F\u7528\u6D4B\u8BD5\uFF0C\u5728SQL\u811A\u672C\u4E2D\u6DFB\u52A0\u4EE5\u4E0B\u811A\u672C\u8FDB\u884C\u6D4B\u8BD5</p><div class="language-sql ext-sql line-numbers-mode"><pre class="language-sql"><code>-- \u5F53\u8868t_user\u5B58\u5728\u65F6\uFF0C\u6E05\u7A7A\u8868\u6570\u636E
+-- HAVE_TABLE(t_user)
+truncate table t_user;
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div>`,15);function r(l,c){return a}var b=n(s,[["render",r],["__file","customer-checker.html.vue"]]);export{b as default};
