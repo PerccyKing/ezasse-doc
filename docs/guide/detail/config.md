@@ -139,3 +139,49 @@ insert into t_user(id,mysql) values('1','PerccyKing');
 | 默认值           | 是否必须 | 解释                   | 备注      |
 |---------------|------|----------------------|---------|
 | CHANGE_LENGTH | 是    | 可以覆盖默认的关键字，按自己喜好任意定义 | 修改后全局生效 |
+
+
+## 多数据源配置
+以下为使用[dynamic-datasource-spring-boot-starter](https://baomidou.com/pages/a61e1b/#%E6%96%87%E6%A1%A3-documentation)的多数据源配置
+```java
+package cn.com.pism.ezasse.demo.multidb.config;
+
+import cn.com.pism.ezasse.starter.EzasseDatasource;
+import cn.com.pism.ezasse.starter.annotation.EnableEzasse;
+import com.baomidou.dynamic.datasource.DynamicRoutingDataSource;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Configuration;
+
+import javax.sql.DataSource;
+import java.util.Map;
+
+/**
+ * @author PerccyKing
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+@Configuration
+@EnableEzasse
+public class EzasseConfig implements EzasseDatasource, ApplicationContextAware {
+
+    private ApplicationContext applicationContext;
+
+    @Override
+    public Map<String, DataSource> getDataSource() {
+        return ((DynamicRoutingDataSource) applicationContext.getBean(DataSource.class)).getDataSources();
+    }
+
+    @Override
+    public DataSource getMaster() {
+        return ((DynamicRoutingDataSource) applicationContext.getBean(DataSource.class)).getDataSource("master");
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+}
+
+```
