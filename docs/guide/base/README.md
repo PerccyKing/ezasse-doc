@@ -20,7 +20,7 @@ ezasse为 Easy automatic SQL script executor 的首字母简写，是一个简�
 * **所以`ezasse`就出现了，`ezasse`就可以解决上述难题，并且可以重复执行，同时配合代码版本管理工具，对脚本版本进行管理**
 
 ### 主要功能
-* SQL脚本执行器
+* 按照指定规则判断是否在项目启动时执行SQL
 * 与项目版本对其的SQL版本管理
 * 自定义SQL校验器
 * 自定义SQL执行器

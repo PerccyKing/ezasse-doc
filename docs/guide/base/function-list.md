@@ -8,7 +8,7 @@
 * 执行器：不同的数据库类型，拥有不同的执行器，主要作用是将SQL脚本在目标数据节点上进行执行
 
 ## 官方执行器支持列表
-若果一下执行器没有适配你使用的数据库，请查看[自定义执行器](../expand/customer-executor)
+若果一下执行器没有适配你使用的数据库，请查看[自定义执行器](../expand/customer-executor.html)
 * [MySQL](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/MysqlEzasseExecutor.java)
 * [Oracle](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/OracleEzasseExecutor.java)
 * [MariaDB](https://github.com/PerccyKing/ezasse/blob/master/ezasse-core/src/main/java/cn/com/pism/ezasse/executor/MariaDbEzasseExecutor.java)
