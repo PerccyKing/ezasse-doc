@@ -6,7 +6,15 @@ module.exports = {
   // 主题和它的配置
   theme: '@vuepress/theme-default',
   head: [
-    ['link', {rel: 'icon', href: '/images/logo.ico'}]
+    ['link', {rel: 'icon', href: '/images/logo.ico'}],
+    ['script', {}, `var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?bcc86a06ac49afdc9601498a55dc52e3";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      `]
   ],
   // plugins: [
   //   backToTopPlugin(),
