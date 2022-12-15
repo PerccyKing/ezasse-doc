@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as s,d as t,b as r}from"./app.9b886fde.js";const c={},o={id:"as-easy-as-1-2-3",tabindex:"-1"},n=r("a",{class:"header-anchor",href:"#as-easy-as-1-2-3","aria-hidden":"true"},"#",-1);function _(d,i){return a(),s("h3",o,[n,t(" As Easy as 1, 2, 3")])}var f=e(c,[["render",_],["__file","index.html.vue"]]);export{f as default};
