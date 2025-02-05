@@ -1,1 +1,1 @@
-module.exports = '/ezasse-doc/'
+module.exports = '/'
