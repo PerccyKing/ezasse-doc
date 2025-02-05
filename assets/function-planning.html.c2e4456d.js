@@ -1,0 +1,1 @@
+const e={key:"v-c049170e",path:"/guide/detail/function-planning.html",title:"\u529F\u80FD\u89C4\u5212",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1651768305e3,contributors:[{name:"PerccyKing",email:"perccyking@gmail.com",commits:1}]},filePathRelative:"guide/detail/function-planning.md"};export{e as data};
